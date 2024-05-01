@@ -1,6 +1,6 @@
 {
   "name": "forumaisdk",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ForumAI NodeJS SDK",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
