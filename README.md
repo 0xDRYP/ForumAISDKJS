@@ -28,7 +28,7 @@ const ModelMarket = forumaisdk.ModelMarket;
 import { ModelMarket } from 'forumaisdk';
 ```
 
-There is two mode of using the SDK to interact with the ForumAI LLM node:
+There is two modes of using the SDK to interact with the ForumAI LLM node:
 
 1. No response streaming
 
