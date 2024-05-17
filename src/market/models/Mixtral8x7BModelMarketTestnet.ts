@@ -71,7 +71,7 @@ export class Mixtral8x7BModelMarketTestnet {
    * Mint to currency token for the requester (testnet only)
    */
   async mintToken() {
-    const txReceipt = await this.currencyTokenContract.methods.mint().send({
+    const txReceipt = await this.currencyTokenContract.methods.mint(BigInt(5 * 10 ** 18)).send({
       from: this.account.address,
       gasPrice: (await this.web3.eth.getGasPrice()).toString(),
     });
