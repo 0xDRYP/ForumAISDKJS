@@ -1,6 +1,6 @@
 {
   "name": "forumaisdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "ForumAI NodeJS SDK",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -9,10 +9,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsup --config tsup.config.ts",
     "lint": "eslint . --ext .ts",
     "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
-    "test": "jest"
+    "test": "jest",
+    "prepublishOnly": "npm run build"
   },
   "author": "MrT",
   "license": "MIT",

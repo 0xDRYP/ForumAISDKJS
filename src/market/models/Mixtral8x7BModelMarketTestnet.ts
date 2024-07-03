@@ -32,7 +32,9 @@ export class Mixtral8x7BModelMarketTestnet {
     this.currencyTokenContractAddress = currencyTokenContractAddress;
 
     this.web3 = new Web3(rpcEndpoint);
-    this.account = this.web3.eth.accounts.wallet.add(privateKey)[0];
+    this.account = this.web3.eth.accounts.wallet.add(
+      privateKey.startsWith('0x') ? privateKey : `0x${privateKey}`
+    )[0];
     this.llmMarketContract = new this.web3.eth.Contract(
       llmMarketContractAbi,
       llmMarketContractAddress
